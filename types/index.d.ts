@@ -446,7 +446,7 @@ export class Issuer<TClient extends BaseClient = BaseClient> {
 
   metadata: IssuerMetadata;
   [custom.http_options]: CustomHttpOptionsProvider;
-  static discover(issuer: string): Promise<Issuer<BaseClient>>;
+  static discover(issuer: string, axiosOptions?: any): Promise<Issuer<BaseClient>>;
   static webfinger(input: string): Promise<Issuer<BaseClient>>;
   static [custom.http_options]: CustomHttpOptionsProvider;
   [key: string]: unknown;
